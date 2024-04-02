@@ -6,9 +6,9 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "publint": "^0.2.5",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "publint": "^0.2.7",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.3"
   },
   "tsup": {
     "entry": [
