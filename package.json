@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "build": "tsup && publint",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "tsup && publint"
   },
   "devDependencies": {
     "publint": "^0.2.7",
