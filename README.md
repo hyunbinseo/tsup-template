@@ -68,3 +68,32 @@ Modules can be exported from files other than `src/index.ts`
   }
 }
 ```
+
+## Set Lifecycle Scripts
+
+Automate package versioning tasks. Reference the [npm documentation].
+
+[npm documentation]: https://docs.npmjs.com/cli/v10/commands/npm-version#description
+
+```jsonc
+{
+  "scripts": {
+    // `npm version` order of execution:
+
+    // 1. Check to make sure the git working directory is clean.
+
+    // 2. Run the `preversion` script.
+    "preversion": "npm test", // These scripts have access to the old `version` in package.json.
+
+    // 3. Bump `version` in `package.json` as requested.
+
+    // 4. Run the `version` script.
+    "version": "npm run build && git add -A dist", // These scripts have access to the new `version` in package.json
+
+    // 5. Commit and tag.
+
+    // 6. Run the `postversion` script.
+    "postversion": "git push && git push --tags" // Use it to clean up the file system or automatically push the commit and/or tag.
+  }
+}
+```
