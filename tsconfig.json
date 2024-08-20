@@ -21,6 +21,10 @@
 		// Reference https://node.green/#ES2023
 
 		"target": "ES2020",
-		"lib": ["ES2020"]
+		"lib": ["ES2020"],
+
+		"allowJs": true,
+		"checkJs": true,
+		"outDir": "dist" // tsup default output directory
 	}
 }
