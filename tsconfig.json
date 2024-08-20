@@ -9,16 +9,18 @@
 		// 2. `tsconfig.json` file's `target` value
 		// 3. `node14` if unspecified (undesirable)
 
-		// TypeScript configuration only supports ECMAScript versions.
+		// TypeScript configuration supports ECMAScript versions.
 		// Reference https://www.typescriptlang.org/tsconfig#target
 
 		// tsup configuration supports esbuild's target values.
-		// Reference https://tsup.egoist.dev/#target-environment
-
-		// Note that a specific Node.js version can be specified.
 		// e.g. es2020, chrome58, firefox57, node12, node12.19.0
+		// Reference https://tsup.egoist.dev/#target-environment
 		// Reference https://esbuild.github.io/api/#target
 
-		"target": "ES2020"
+		// Node.js 20 LTS supports all ES2023 APIs.
+		// Reference https://node.green/#ES2023
+
+		"target": "ES2020",
+		"lib": ["ES2020"]
 	}
 }
