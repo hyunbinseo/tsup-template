@@ -3,13 +3,14 @@
 	"type": "module",
 	"scripts": {
 		"build": "tsup && publint",
+		"check": "tsc --noEmit",
 		"prepublishOnly": "tsup && publint",
 		"postversion": "git push && git push --tags"
 	},
 	"devDependencies": {
-		"publint": "^0.2.7",
-		"tsup": "^8.0.2",
-		"typescript": "^5.4.3"
+		"publint": "^0.2.12",
+		"tsup": "^8.3.5",
+		"typescript": "^5.7.2"
 	},
 	"exports": {
 		".": {

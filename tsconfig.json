@@ -7,6 +7,8 @@
 		"checkJs": true,
 		"outDir": "dist", // tsup default output directory
 
+		"skipLibCheck": true,
+
 		// tsup build target priorities:
 		// 1. `tsup.config.js` file's `target` option
 		// 2. `tsconfig.json` file's `target` value
