@@ -1,7 +1,6 @@
 {
 	"name": "name",
 	"version": "0.0.1",
-	"type": "module",
 	"scripts": {
 		"check": "tsc --noEmit",
 		"prepack": "tsup && publint",
@@ -12,15 +11,13 @@
 		"tsup": "^8.4.0",
 		"typescript": "^5.8.2"
 	},
+	"type": "module",
 	"exports": {
 		".": {
-			"require": "./dist/index.cjs",
-			"import": "./dist/index.js"
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
 		}
 	},
-	"main": "./dist/index.cjs",
-	"module": "./dist/index.js",
-	"types": "./dist/index.d.ts",
 	"files": [
 		"dist"
 	],

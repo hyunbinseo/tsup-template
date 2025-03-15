@@ -1,8 +1,9 @@
 # tsup-template
 
-Create a JavaScript package that fully supports ESM and CJS - [example]
+Create a JavaScript package that properly supports ESM:
 
-[example]: https://arethetypeswrong.github.io/?p=new-request
+> [!NOTE]
+> Although v20 is in maintenance mode (…) an exception was made to backport `require(esm)` due to its importance and impact on the ecosystem. — [Node v20.19.0 (LTS)](https://nodejs.org/en/blog/release/v20.19.0)
 
 ## Quick Start
 
@@ -57,13 +58,13 @@ Modules can be exported from files other than `src/index.ts`
   },
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
     // Add subpath export as relative paths
     "./nested": {
-      "import": "./dist/nested/index.js",
-      "require": "./dist/nested/index.cjs"
+      "types": "./dist/nested/index.d.ts",
+      "default": "./dist/nested/index.js"
     }
   }
 }
