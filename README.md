@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> This project is superseded by [tsdown-template](https://github.com/hyunbinseo/tsdown-template) and is no longer maintained.
+
+> [!WARNING]
+> tsup is [not actively maintained anymore](https://github.com/egoist/tsup#readme). Please consider migrating to [tsdown](https://github.com/rolldown/tsdown).
+
 # tsup-template
 
 Create a JavaScript package that properly supports ESM:
